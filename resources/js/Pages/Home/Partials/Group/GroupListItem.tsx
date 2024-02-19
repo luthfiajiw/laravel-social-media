@@ -1,3 +1,4 @@
+import PrimaryButton from '@/Components/PrimaryButton'
 import TextInput from '@/Components/TextInput'
 import { Link } from '@inertiajs/react'
 import React from 'react'
@@ -10,11 +11,11 @@ export default function GroupListItem() {
         className='w-full'
         placeholder='Type to search'
       />
-      <button className='text-sm bg-indigo-500 hover:bg-indigo-600 text-white rounded py-1 px-2 w-[120px]'>
+      <PrimaryButton className='w-[120px]'>
         New Group
-      </button>
+      </PrimaryButton>
     </div>
-    <div className="mt-3 h-[200px] lg:flex-1 overflow-auto">
+    <div className="mt-3 lg:flex-1 overflow-auto">
       {/* <div className="text-gray-400 text-center p-3">
         You are not joined to any groups
       </div> */}
@@ -34,7 +35,7 @@ export default function GroupListItem() {
           </div>
         </Link>
       </div>
-      {/* GROUP ITEM */}
+
     </div>
     </>
   )

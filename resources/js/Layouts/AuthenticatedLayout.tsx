@@ -12,7 +12,7 @@ export default function AuthenticatedLayout({ user, header, children }: PropsWit
     return (
         <div className="min-h-screen bg-gray-100">
             <nav className="bg-white border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
@@ -112,7 +112,7 @@ export default function AuthenticatedLayout({ user, header, children }: PropsWit
                 </header>
             )}
 
-            <main className='max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6'>
+            <main className='max-w-full mx-auto px-4 lg:px-8 space-y-6'>
                 {children}
             </main>
         </div>
