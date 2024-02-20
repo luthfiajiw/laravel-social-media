@@ -5,7 +5,7 @@ import FollowingListItem from './FollowingListItem'
 
 export default function FollowingList() {
   return (
-    <div className='px-3 bg-white dark:bg-slate-950 dark:border-slate-900 dark:text-gray-100  rounded border h-full py-3 overflow-hidden'>
+    <div className='px-3 bg-white dark:bg-slate-950 dark:border-slate-900 dark:text-gray-100  rounded border py-3 overflow-hidden'>
       {/* MOBILE */}
       <div className="block lg:hidden">
         <Disclosure>
@@ -28,7 +28,7 @@ export default function FollowingList() {
       </div>
 
       {/* DESKTOP */}
-      <div className="h-full overflow-hidden flex-col hidden lg:flex">
+      <div className="overflow-hidden flex-col hidden lg:flex">
         <h2 className="text-xl font-bold">My Followings</h2>
         <FollowingListItem />
       </div>

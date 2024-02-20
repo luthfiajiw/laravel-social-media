@@ -15,7 +15,7 @@ export default function GroupListItem() {
         New Group
       </PrimaryButton>
     </div>
-    <div className="mt-3 lg:flex-1 overflow-auto">
+    <div className="mt-3 lg:flex-1 overflow-auto max-h-52">
       {/* <div className="text-gray-400 text-center p-3">
         You are not joined to any groups
       </div> */}

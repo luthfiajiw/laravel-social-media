@@ -4,7 +4,7 @@ import { Disclosure } from '@headlessui/react'
 
 export default function GroupList() {
   return (
-    <div className='px-3 bg-white dark:bg-slate-950 rounded-md border dark:border-slate-900 dark:text-gray-100 h-full py-3 overflow-hidden'>
+    <div className='px-3 bg-white dark:bg-slate-950 rounded-md border dark:border-slate-900 dark:text-gray-100 py-3 overflow-hidden'>
       {/* MOBILE */}
       <div className="block lg:hidden">
         <Disclosure>
@@ -27,7 +27,7 @@ export default function GroupList() {
       </div>
       
       {/* DESKTOP */}
-      <div className="h-full overflow-hidden flex-col hidden lg:flex">
+      <div className="overflow-hidden flex-col hidden lg:flex">
         <h2 className="text-xl font-bold">My Groups</h2>
 
         <GroupListItem />

@@ -1,8 +1,16 @@
+import { Group } from '@/types/group'
+import { User } from '@/types/user'
 import { Link } from '@inertiajs/react'
 import React from 'react'
 import { FaChevronRight } from 'react-icons/fa6'
 
-export default function PostUserHeader() {
+interface PostUserHeaderProps {
+  user: User
+  group?: Group | null
+  created_at: string
+}
+
+export default function PostUserHeader({ user, group, created_at } : PostUserHeaderProps) {
   return (
     <div className='flex items-center gap-2'>
       <Link href="#">
@@ -13,14 +21,18 @@ export default function PostUserHeader() {
       </Link>
 
       <div>
-        <h4 className='flex items-center font-bold gap-1'>
+        <h4 className='flex items-center font-bold gap-1.5'>
           <Link href="#" className="hover:underline">
-            User Name
+            {user.name}
           </Link>
-          <FaChevronRight size={12} className=' text-gray-500'/>
-          <Link href="#" className="hover:underline">
-            Group Name
-          </Link>
+          {group && (
+            <>
+            <FaChevronRight size={12} className=' text-gray-500'/>
+            <Link href="#" className="hover:underline">
+              {group.name}
+            </Link>
+            </>
+          )}
         </h4>
 
         <small className="text-gray-400">6 Feb 19.23</small>
